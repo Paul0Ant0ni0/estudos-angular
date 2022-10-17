@@ -1,0 +1,23 @@
+<app-card 
+titulo="Coxinha de Strogonoff"
+banner="https://cdn.pixabay.com/photo/2019/10/31/18/30/coxinha-4592536_1280.jpg"></app-card>
+<app-card 
+titulo="Lasanha de Berinjela"
+banner="https://cdn.pixabay.com/photo/2016/02/04/03/22/lasagne-1178514_1280.jpg"
+userFoto="https://cdn.pixabay.com/photo/2016/06/06/17/05/woman-1439909_1280.jpg"
+corBtn="#D72F06"
+></app-card> 
+<app-card 
+titulo="Coxinha de Strogonoff"
+banner="https://cdn.pixabay.com/photo/2019/10/31/18/30/coxinha-4592536_1280.jpg"></app-card>
+<app-card 
+titulo="Lasanha de Berinjela"
+banner="https://cdn.pixabay.com/photo/2016/02/04/03/22/lasagne-1178514_1280.jpg"
+userFoto="https://cdn.pixabay.com/photo/2016/06/06/17/05/woman-1439909_1280.jpg"
+corBtn="#D72F06"
+></app-card> 
+<app-uploader (uploadCompleto)="mostrarMsg()"></app-uploader>
+<!--  Ao clicar no botão, desejo executar o método click() no input file -->
+<!--  Variáveis de Template - Template Variables  -->
+<input type="file" #inputFile>
+<button id="btn" (click)="inputFile.click()">Selecionar um arquivo</button>
