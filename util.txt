@@ -1,0 +1,48 @@
+Angular
+
+1- Parte
+Comando no CMD
+Instalação da ferremanta CMD do Angular.
+
+npm install -g @angular/cli
+
+2- Parte
+Versão
+ng version
+
+3- Parte
+Criando um projeto na pasta
+
+ng new nomedoprojeto
+ng new nomedoprojeto --skip-tests (para não criar teste unitários dos componentes)
+
+4- Extensão
+
+Angular Language Service
+Angular Snippets
+
+5- Rodar um projeto no terminal do gitbash
+
+ng serve -o
+ng s -o
+
+6- Interroper o servidor do Angular 
+
+crtl + c
+
+7- Comando para criar componestes
+
+Estrutura: ng generate component nomedocomponent
+
+ng generate component nomedocomponente
+ng g c nomedocomponente
+
+8 - Instalando pacote do Boostratp no projeto
+npm i bootstrap
+
+9 - Instalando dependecia no angular.json
+
+"./node_modules/bootstrap/dist/css/bootstrap.min.css"
+"./node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+
