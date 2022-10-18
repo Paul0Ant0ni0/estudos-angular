@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="cartao">
+
+        <div class="frente">
+
+            <div class="logo-cartao">
+                <img [src]="img" alt="">
+            </div>
+            
+            <div class="numero-cartao">
+                <strong>{{ numeroCartao }}</strong>
+            </div>
+
+            <div class="cartao-footer">
+                <p>{{ nomeCartao }}</p>
+                <strong>{{ mm }}/{{ aa }}</strong>
+
+            </div>
+
+        </div>
+        <div class="verso">
+            <div class="tarja"></div>
+            <div class="cvc">
+                <p>{{ cvc }}</p>
+            </div>
+
+        </div>
+      </div>
+
+
+
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nome do Cartão</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="nomeCartao" (focus)="limparCarmpos()" name="nome" aria-describedby="emailHelp" placeholder="Ex: Talita Neves">
+        
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Número do Cartão</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="numeroCartao" (keypress)="alterarImg()" name="numero" placeholder="Ex: 111.111.111.111">
+        </div>
+        <div class="label-input">
+            <span>Expiração</span>
+            <span>CVC</span>
+        </div> 
+        <div class="input-group mb-3">
+            <input type="text" class="form-control me-1" placeholder="MM" [(ngModel)]="mm" name="mm" maxlength="2" aria-label="Username">
+            <input type="text" class="form-control me-1" placeholder="AA" [(ngModel)]="aa" name="aa" maxlength="2" aria-label="Server">
+            <input type="text" class="form-control" placeholder="111" [(ngModel)]="cvc" name="cvc" maxlength="3" aria-label="Server">
+        </div>
+          
+        <button type="submit" class="btn btn-primary">Confirmar</button>
+      </form>
+
+
+
+</div>

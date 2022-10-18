@@ -1,0 +1,98 @@
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.cartao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100vh;
+    background: rgb(45,138,134);
+    background: linear-gradient(180deg, rgba(45,138,134,1) 22%, rgba(11,84,120,1) 87%);
+    padding: 45px;
+}
+
+.frente {
+    background-color: rgb(255, 153, 0);
+    width: 100%;
+    height: 45%;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.frente img {
+    width: 45px;
+    object-fit: contain;
+}
+
+.frente .numero-cartao {
+    margin-top: 50px;
+}
+
+.frente .cartao-footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+   
+}
+
+
+/* Formulario */
+
+.label-input{
+    width: 71%;
+    display: flex;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+form {
+    width: 30%;
+    margin: auto;
+}
+
+.btn {
+    width: 100%;
+    background: rgb(45,138,134);
+    background: linear-gradient(180deg, rgba(45,138,134,1) 22%, rgba(11,84,120,1) 87%);
+}
+
+/*  Cartão verso */
+
+.verso {
+    margin-top: 8px;
+    background-color: rgb(227, 227, 227);
+    width: 100%;
+    height: 45%;
+    border-radius: 8px;
+   
+    
+}
+
+.verso .tarja{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.verso .cvc {
+    margin: 15px;
+    height: 35px;
+    background-color: #c2c2c2;
+    text-align: right;
+    padding: 6px;
+}
