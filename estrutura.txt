@@ -1,0 +1,9 @@
+1 - Cria todos os componentes
+2 - Cria a interface com os atributos
+3 - Utiliza o  String Interpolation e  Property Binding
+ nos componentes.
+4 - Criar um objeto do Tipo da Interface e conecta os objetos nos componentes
+5 - Adicionar o @Input() no objeto que irá receber as informações
+6 - Importar o FormsModule nos imports do app.module.js
+7- Utilizar o TwoWayDataBinding nos campos input do formulário
+Ex: [(ngModel)]="nomeDoObjeto.propriedade" => este objeto estará no arquivo ts do formulário

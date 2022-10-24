@@ -45,4 +45,21 @@ npm i bootstrap
 "./node_modules/bootstrap/dist/css/bootstrap.min.css"
 "./node_modules/bootstrap/dist/js/bootstrap.min.js"
 
+10 - Extensão Angular DevTools
 
+https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh
+
+
+11 - Comando Vscode
+
+shift + alt + seta para baixo com o elemento selecionado
+ctrl + d para duplicar o cursor
+
+12 - Extensão de inglês Code spell checke
+
+Extensão que verifica os erros em inglês
+
+13- Criando Pipes customizados no Angular
+
+ng generate pipe <nomedopipe>
+ng g p <nomedopipe>

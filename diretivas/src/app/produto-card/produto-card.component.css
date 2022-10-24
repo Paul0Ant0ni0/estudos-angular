@@ -1,0 +1,17 @@
+.card {
+    width: 250px;
+}
+
+.card-image-top {
+    width: 235.90px;
+    height: 235.90px;
+}
+
+
+.card-subtitle {
+    font-size: 13px;
+}
+
+.badge {
+    font-size: 10px;
+}

@@ -22,11 +22,11 @@ export class CartaoComponent implements OnInit {
   alterarImg(){
     
     if(this.numeroCartao.startsWith('0')){
-       this.img = "https://mtf.mastercard.co.za/content/dam/public/mastercardcom/mea/za/logos/mc-logo-52.svg"
+       this.img = "../../assets/img/mastercard.svg"
     }else if(this.numeroCartao.startsWith('4')){
-      this.img = "https://logospng.org/wp-content/uploads/visa.jpg"
+      this.img = "../../assets/img/visa.svg"
     }else if(this.numeroCartao.startsWith('3')){
-      this.img = "https://logodownload.org/wp-content/uploads/2017/04/elo-logo-1-1.png"
+      this.img = "../../assets/img/elo.svg"
     }
 
   }

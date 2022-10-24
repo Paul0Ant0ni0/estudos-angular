@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div class="credit-card-front">
+      <div class="credit-card-logo">
+        <img src="/assets/mastercard.svg" alt="Mastercard Logo">
+      </div>
+      <div class="credit-card-number">
+        <strong>{{ dadosCartao.numero || '653 953 0056 3640'}}</strong>
+      </div>
+      <div class="credit-card-data">
+        <p class="name">
+          {{ dadosCartao.nome || 'AMANDA PEREIRA DA SILVA' }}
+        </p>
+        <strong class="expiration-date">
+          {{ dadosCartao.mes || '05' }}/{{ dadosCartao.ano || '2025'}}
+        </strong>
+      </div>
+    </div>
+  
+    <div class="credit-card-back">
+      <div class="line"></div>
+      <div class="cvc">
+        <strong>{{ dadosCartao.cvc || '653'}}</strong>
+      </div>
+    </div>
+  </div>
