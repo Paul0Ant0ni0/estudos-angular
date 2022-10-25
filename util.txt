@@ -63,3 +63,21 @@ Extensão que verifica os erros em inglês
 
 ng generate pipe <nomedopipe>
 ng g p <nomedopipe>
+
+14- Frameworking Angular Material
+
+Link: https://material.angular.io/components/categories
+
+15 - Comando para instalar o Angular Material
+
+ng add @angular/material
+
+
+16 - Módulo com outros módulos
+
+https://gist.github.com/renato3x/97578568141c5d27275084de2e12f864
+
+17 - Criando modulos
+
+ng generate module <nomedomodulo>
+ng g m <nomedomodulo>

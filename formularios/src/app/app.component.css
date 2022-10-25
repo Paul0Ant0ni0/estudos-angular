@@ -1,0 +1,21 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* É MAIS VIÁVEL CRIAR UM CLASSE PARA ESTILIZA O COMPONENTE */
+
+.card-form {
+    width: 400px;
+}
+
+span {
+    margin-left: 15px;
+}

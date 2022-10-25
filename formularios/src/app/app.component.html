@@ -1,0 +1,90 @@
+<div class="flex">
+    <mat-card class="card-form">
+      <mat-card-title>Cadastro de Usuários</mat-card-title>
+      <mat-card-content>
+            <!-- 
+                Informar que o formulário será validado pelo Template Driver Formas
+                ngForm informa que o formulário utilizrá o metodo de validação 
+             -->
+
+        <form action="#" #userForm="ngForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Nome: </mat-label>
+                <input
+                type="text"
+                matInput
+                [(ngModel)]="dadosUsuario.nome"
+                name="nome"
+                minlength="8"
+                maxlength="15"
+                required
+                placeholder="Ana Clara Pereira da Silva"
+                #inputNome="ngModel"> <!--matInput possibilita adicionar estilo do Material | #inputNome="ngModel" pode ser utilizado para fazer um validação especifica-->
+                <mat-error *ngIf="inputNome.touched && inputNome.invalid">
+                    <span *ngIf="inputNome.errors?.['minlength']">O mínimo de caracteres é 8</span>
+                    <span *ngIf="inputNome.errors?.['maxlength']">O máximo de caracteres é 15</span>
+                    <span *ngIf="inputNome.errors?.['required']">Preencha o campo nome</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Sobrenome: </mat-label>
+                <input 
+                type="text"
+                matInput
+                [(ngModel)]="dadosUsuario.sobronome"
+                minlength="5"
+                maxlength="15"
+                required
+                name="sobrenome" 
+                #inputSobrenome="ngModel">
+                <mat-error *ngIf="inputSobrenome.touched && inputSobrenome.invalid">
+                    <span *ngIf="inputSobrenome.errors?.['minlength']">O mínimo de caracteres é 5</span>
+                    <span *ngIf="inputSobrenome.errors?.['maxlength']">O máximo de caracteres é 15</span>
+                    <span *ngIf="inputSobrenome.errors?.['required']">Preencha o campo sobrenome</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Email: </mat-label>
+                <input 
+                type="email" 
+                matInput 
+                [(ngModel)]="dadosUsuario.email"
+                name="email"
+                minlength="10"
+                maxlength="25"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                #inputEmail="ngModel">
+                <mat-error *ngIf="inputEmail.touched && inputEmail.invalid">
+                    <span *ngIf="inputEmail.errors?.['minlength']">O mínimo de caracteres é 10</span>
+                    <span *ngIf="inputEmail.errors?.['maxlength']">O máximo de caracteres é 25</span>
+                    <span *ngIf="inputEmail.errors?.['pattern']">Preencha um e-mail válido</span>
+                    <span *ngIf="inputEmail.errors?.['required']">Preencha o campo email</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Senha: </mat-label>
+                <input 
+                type="password" 
+                matInput 
+                [(ngModel)]="dadosUsuario.senha" 
+                minlength="5"
+                maxlength="10"
+                required
+                name="senha"
+                #inputSenha="ngModel">
+            </mat-form-field>
+            <mat-error *ngIf="inputSenha.touched && inputSenha.invalid">
+                <span *ngIf="inputSenha.errors?.['minlength']">O mínimo de caracteres é 5</span>
+                <span *ngIf="inputSenha.errors?.['maxlength']">O máximo de caracteres é 10</span>
+                <span *ngIf="inputSenha.errors?.['required']">Preencha o campo senha</span>
+            </mat-error>
+
+            <button type="submit" mat-raised-button color="primary">Cadastrar</button> <!--mat-raised-button diretiva para criar botão com cor de fundo-->
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
