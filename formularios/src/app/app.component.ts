@@ -14,4 +14,12 @@ export class AppComponent {
     email: '',
     senha: ''
   }
+
+
+  enviarForm(evento: any){
+    evento.preventDefault() // Anula o comportamento padrão do elemento html
+    evento.stopPropagation() // evita que o evento afete outros elementos html
+
+    alert("oi")
+  }
 }

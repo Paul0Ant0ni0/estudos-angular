@@ -1,22 +1,23 @@
 .flex {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    
+    
 }
 
-form {
+form,
+section {
     display: flex;
     flex-direction: column;
-}
-
-/* É MAIS VIÁVEL CRIAR UM CLASSE PARA ESTILIZA O COMPONENTE */
-
-.card-form {
     width: 400px;
 }
 
-span {
-    margin-left: 15px;
+.r-form {
+    width: 400px;
 }
 
+.align-input {
+    float: right;
+}
