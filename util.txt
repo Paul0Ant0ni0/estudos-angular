@@ -81,3 +81,15 @@ https://gist.github.com/renato3x/97578568141c5d27275084de2e12f864
 
 ng generate module <nomedomodulo>
 ng g m <nomedomodulo>
+
+18 - Criando Services
+
+ng generate services <nomedoservices>
+ng g s <nomedoservices>
+
+ --- PODE ADICIONAR O ARQUIVO GERADO DENTRO DE UMA PASTA
+ng generate s <nomedapasta>/services
+
+
+19 - Link 
+https://rxjs.dev/guide/installation

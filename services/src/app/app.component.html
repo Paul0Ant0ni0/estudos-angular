@@ -1,0 +1,32 @@
+<!-- 
+  Services possibilita fazer as requisições HTTP, podendo ser feitas em varios componentes
+ -->
+
+<mat-card>
+  <mat-card-content>
+    <table border="1" cellpadding="15" cellspacing="5" align="center" style="text-align:center">
+      <thead>
+        <tr> <b>REQUSIÇÃO</b></tr>
+        <tr>
+          <td><b>Nome</b></td>
+          <td><b>Sobrenome</b></td>
+          <td><b>Telefone</b></td>
+          <td><b>Email</b></td>
+          <td><b>CPF</b></td>
+         
+        </tr>
+      </thead>
+     
+      <Tbody *ngFor="let c of clientes">
+        <tr>
+          <td>{{c.nome}}</td>
+          <td>{{c.sobrenome}}</td>
+          <td>{{c.telefone}}</td>
+          <td>{{c.email}}</td>
+          <td>{{c.cpf}}</td>
+        </tr>
+
+      </Tbody>
+    </table>
+  </mat-card-content>
+</mat-card>1
