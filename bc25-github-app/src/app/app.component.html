@@ -1,0 +1,43 @@
+<main class="container">
+  <section class="search">
+    <img src="/assets/github.svg" alt="Github">
+    <form action="#" id="search-form" [formGroup]="githubForm" (ngSubmit)="procurar()">
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input type="text" matInput placeholder="Ex: frogs123" formControlName="username">
+      </mat-form-field>
+      <button mat-flat-button color="accent" matTooltip="Procurar Usuário" [disabled]="githubForm.invalid">
+        <mat-icon>search</mat-icon>
+      </button>
+    </form>
+  </section>
+
+
+  <section class="container-usuario"  *ngIf="gUser != undefined">
+    <mat-card class="dados-usuario">
+      <section class="conteudo">
+        <img mat-card-image [src]="gUser.avatar_url" class="img-usuario">
+        <h3><strong>Dados Pesssoais</strong></h3>
+        <hr>
+        <p>Nome: {{ gUser.name }}</p>
+        <p>Nome: {{ gUser.login }}</p>
+
+        <h3><strong>Dados Adicionais</strong></h3>
+        <hr>
+        <p>Seguindo: {{ gUser.following }}</p>
+        <p>Seguindores: {{ gUser.followers }}</p>
+        <p>Localização: {{ gUser.location }}</p>
+        <section class="btn">
+          <button mat-flat-button>Github</button>
+          <button mat-flat-button>Website</button>
+        </section>
+      </section>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>REPOSITÓRIOS PÚBLICOS</mat-card-title>
+      <p>{{gRepos.name}}</p>
+    </mat-card>
+
+  </section>
+</main>
