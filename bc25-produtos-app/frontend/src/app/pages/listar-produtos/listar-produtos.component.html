@@ -1,0 +1,27 @@
+<div class="style-container">
+    <mat-card *ngFor="let p of produtos" class="container">
+        <mat-card-content class="cards">
+            <section *ngIf="!p.foto; else outro">
+                <img src="https://igp.rs.gov.br/themes/modelo-noticias/images/outros/GD_imgSemImagem.png" alt=""  mat-card-image class="card-img">
+            </section>
+            <ng-template #outro>
+                <img [src]="p.foto" alt=""  mat-card-image class="card-img">
+            </ng-template>
+            <section>
+                <span>#{{p.id}}</span>
+                <mat-card-title>{{p.nome}}</mat-card-title>
+                <p class="card-text">{{p.descricao}}</p>
+            </section>
+            <section class="style-btn">
+                <button mat-flat-button color="accent" matTooltip="Excluir Produto" class="btn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-flat-button color="accent" matTooltip="Atualizar Produto" class="btn">
+                    <mat-icon>edit_node</mat-icon>
+                </button>
+            </section>
+           
+        </mat-card-content>
+    </mat-card>
+    
+</div>
