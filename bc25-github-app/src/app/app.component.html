@@ -1,5 +1,5 @@
 <main class="container">
-  <section class="search">
+  <section class="search" *ngIf="!gUser">
     <img src="/assets/github.svg" alt="Github">
     <form action="#" id="search-form" [formGroup]="githubForm" (ngSubmit)="procurar()">
       <mat-form-field appearance="outline">
@@ -20,7 +20,7 @@
         <h3><strong>Dados Pesssoais</strong></h3>
         <hr>
         <p>Nome: {{ gUser.name }}</p>
-        <p>Nome: {{ gUser.login }}</p>
+        <p>Usuário: {{ gUser.login }}</p>
 
         <h3><strong>Dados Adicionais</strong></h3>
         <hr>
@@ -28,15 +28,15 @@
         <p>Seguindores: {{ gUser.followers }}</p>
         <p>Localização: {{ gUser.location }}</p>
         <section class="btn">
-          <button mat-flat-button>Github</button>
-          <button mat-flat-button>Website</button>
+          <button mat-flat-button><a [href]="gUser.html_url">Github</a></button>
+          <button mat-flat-button><a [href]="gUser.html_url">Website</a></button>
         </section>
       </section>
     </mat-card>
 
-    <mat-card>
+    <mat-card class="dados-repositorios">
       <mat-card-title>REPOSITÓRIOS PÚBLICOS</mat-card-title>
-      <p>{{gRepos.name}}</p>
+      <p></p>
     </mat-card>
 
   </section>

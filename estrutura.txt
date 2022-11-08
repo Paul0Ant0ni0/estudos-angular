@@ -8,3 +8,16 @@
 7- Utilizar o TwoWayDataBinding nos campos input do formulário
 Ex: [(ngModel)]="nomeDoObjeto.propriedade" => 
 este objeto estará no arquivo ts do formulário
+
+
+
+Tratamentos de erros de requisições HTTP
+
+Deve utiliza a classe HttpErrorResponse
+Exemplo: 
+
+if(erro instanceof HttpErrorResponse){
+            if(erro.status == 404){
+              alert(`Usuário ${username} não encontrado :'(`)
+            }
+        }

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="header">
+        <form action="#" id="search-form" [formGroup]="movieForm" (ngSubmit)="buscarFilme()">
+            <mat-form-field appearance="outline" class="form-container">
+                <mat-label>Pesquise</mat-label>
+                <input type="text" matInput placeholder="Ex: Piratas do Caribe" formControlName="movie">
+            </mat-form-field>
+            <button mat-flat-button color="accent" matTooltip="Procurar Filme" [disabled]="movieForm.invalid" class="btn">
+                <mat-icon>search</mat-icon>
+            </button>
+        </form>
+       
+    </div>
+
+    <section *ngIf="filmes != undefined" class="container">
+        <mat-card *ngFor="let f of filmes.results" class="cards">
+                <img [src]="'https://image.tmdb.org/t/p/original/'+f.poster_path" mat-card-image class="card-img">
+                <section class="titulo">
+                    <h3> {{f.original_title}}</h3>
+                    </section>
+        </mat-card>
+    </section>
+    
+</div>
+
+
+
+<!--
+    
+https://api.themoviedb.org/3/search/movie?api_key=d0d17cbea03e1e751061b001e857b4fb&query=lord+of+the+rings
+-->

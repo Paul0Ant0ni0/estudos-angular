@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.cards {
+    margin: 15px;
+    width: 148px;
+    height: 180px;
+    
+}   
+
+.header {
+    padding: 8px;
+    width: 100vw;
+    background-color: #004539;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+#search-form {
+    background-color: white;
+    padding: 3px;
+    height: 20%;
+    border-radius: 5px;
+ 
+}
+
+.btn {
+    height: 55px;
+    bottom: 11px;
+    background-color: #f3e600;
+}
+
+.form-container {
+    height: 18px;
+    padding-left: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    padding: 0;
+}
+
+.card-img {
+    width: 180px;
+}
+
+.titulo h3 {
+    word-break: break-all;
+}

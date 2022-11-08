@@ -30,12 +30,12 @@ export class GithubApiService {
      * como parâmatro
      * 
      */
-    this.procurarRepositorios(username)
+
     return  this.http.get<GithuUser>(`${this.baseURL}${username}`)
 
   }
 
   procurarRepositorios(username: string){
-    return this.http.get<GithubRepos>(`${this.baseURL}${username}/repos`)
+    return this.http.get<GithubRepos[]>(`${this.baseURL}${username}/repos`)
   }
 }

@@ -1,0 +1,29 @@
+<main class="container">
+  <section>
+    <mat-card class="box">
+      <img src="/assets/icone.png" alt="location">
+      <span>Consulte o Códigos de Endereçamento Postal (CEP)</span>
+      <form action="#" id="search-form" [formGroup]="cepForm" (ngSubmit)="buscar()">
+        <mat-form-field appearance="outline">
+          <mat-label>Digite o cep:</mat-label>
+          <input type="text" matInput placeholder="Ex: 250685528" formControlName="cep">
+        </mat-form-field>
+        <button mat-flat-button color="accent" matTooltip="Buscar cep" [disabled]="cepForm.invalid">
+          <mat-icon>BUSCAR</mat-icon>
+        </button>
+        
+
+      </form>
+    </mat-card>
+  </section>
+  <section *ngIf="cep">
+    <mat-card>
+      <p>CEP: {{ cep.cep }} </p>
+      <p>LOGRADOURO: {{ cep.logradouro }} </p>
+      <p>COMPLEMENTO: {{ cep.complemento }}</p>
+      <p>BAIRRO: {{ cep.bairro }}</p>
+      <p>LOCALIDADE: {{ cep.localidade }} </p>
+      <p>UF: </p>
+    </mat-card>
+  </section>
+</main>
