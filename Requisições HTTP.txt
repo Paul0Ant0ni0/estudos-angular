@@ -1,0 +1,7 @@
+----------= REQUISIÇÃO HTTP - ANGULAR =------------
+
+1º Importar o Módulo HttpClientModule no app.module.ts
+2º Criar um service que irá conter os métodos HTTP (CRUD)
+3º Criar a Interface seguindo o mesmo modelo da API
+4º Injetar o método HttpClientModule no construtor do service. Ex: private http: HttpClient
+5º Criar uma propriedade constante no service que irá conter a URL da requisição. Ex: private readonly base_URL = 'http://localhost:3000/exemplos'

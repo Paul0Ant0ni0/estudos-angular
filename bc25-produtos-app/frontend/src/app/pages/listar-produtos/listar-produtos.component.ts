@@ -9,12 +9,15 @@ import { ProdutosApiService } from 'src/app/services/produtos-api.service';
 })
 export class ListarProdutosComponent implements OnInit {
 
+  altImg: string = 'https://igp.rs.gov.br/themes/modelo-noticias/images/outros/GD_imgSemImagem.png'
+
   produtos: Produto[] = []
   constructor(
     private produtosService: ProdutosApiService
   ) { }
 
   ngOnInit(): void {// é chamado quando o componente foi colocado na tela (renderizado)
+    
     this.produtosService.listarProdutos().subscribe(
       (prods) => {
         this.produtos = prods
@@ -22,6 +25,10 @@ export class ListarProdutosComponent implements OnInit {
       }
 
     )
+  }
+
+  deletarProduto(idProduto: number){
+    this.deletarProduto(idProduto)
   }
 
 

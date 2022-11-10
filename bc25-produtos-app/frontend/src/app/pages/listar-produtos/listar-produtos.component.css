@@ -1,5 +1,5 @@
 .container {
-    width: 220px;
+    width: 250px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -8,7 +8,7 @@
 }
 
 .cards {
-    background-color: aquamarine;
+    background-color: rgb(220, 255, 250);
     width: 220px;
     margin: 8px;
     padding: 12px;
@@ -37,4 +37,25 @@
 }
 .btn {
     width: 20px;
+}
+
+.card-title {
+    font-size: 15px;
+    color: rgb(135, 135, 135);
+}
+
+.btn-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    right: 15px;
+    top: 88%;
+    border-radius: 50%;
+}
+
+.btn-add:active {
+    background-color: rgb(173, 255, 255);
 }

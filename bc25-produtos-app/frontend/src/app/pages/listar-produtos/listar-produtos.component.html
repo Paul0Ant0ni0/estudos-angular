@@ -1,27 +1,24 @@
 <div class="style-container">
     <mat-card *ngFor="let p of produtos" class="container">
         <mat-card-content class="cards">
-            <section *ngIf="!p.foto; else outro">
-                <img src="https://igp.rs.gov.br/themes/modelo-noticias/images/outros/GD_imgSemImagem.png" alt=""  mat-card-image class="card-img">
-            </section>
-            <ng-template #outro>
-                <img [src]="p.foto" alt=""  mat-card-image class="card-img">
-            </ng-template>
+            <img [src]="p.foto || altImg" alt="" mat-card-image class="card-img">
             <section>
-                <span>#{{p.id}}</span>
-                <mat-card-title>{{p.nome}}</mat-card-title>
+                <mat-card-title class="card-title">{{p.nome}}</mat-card-title>
+                <strong>R$ {{p.preco}}</strong>
                 <p class="card-text">{{p.descricao}}</p>
             </section>
             <section class="style-btn">
-                <button mat-flat-button color="accent" matTooltip="Excluir Produto" class="btn">
+                <button mat-flat-button color="accent" matTooltip="Excluir Produto" class="btn" (click)="deletarProduto(p.id)">
                     <mat-icon>delete</mat-icon>
                 </button>
-                <button mat-flat-button color="accent" matTooltip="Atualizar Produto" class="btn">
+                <a [routerLink]=" '/produtos/' + p.id" mat-flat-button color="accent" matTooltip="Atualizar Produto"
+                    class="btn">
                     <mat-icon>edit_node</mat-icon>
-                </button>
+                </a>
             </section>
-           
         </mat-card-content>
     </mat-card>
-    
+    <a [routerLink]="'/cadastro'" mat-flat-button color="accent" matTooltip="Adicionar Produto" class="btn-add">
+        <mat-icon>add</mat-icon>
+    </a>
 </div>

@@ -1,0 +1,32 @@
+<mat-card class="container">
+  <mat-card-header>
+    <mat-card-title>Dados do Produto</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form action="#" (ngSubmit)="salvarProduto()" [formGroup]="produtoForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput formControlName="nome">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Preço</mat-label>
+        <input type="number" matInput formControlName="preco">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput formControlName="descricao"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Foto</mat-label>
+        <input type="text" matInput formControlName="foto">
+      </mat-form-field>
+      <button type="submit" mat-stroked-button color="primary" [disabled]="produtoForm.invalid">Salvar</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<div class="container-btn">
+  <a [routerLink]="'/produtos'" mat-flat-button color="accent" matTooltip="Adicionar Produto" class="btn-add">
+    <mat-icon>arrow_back</mat-icon>
+  </a>
+</div>

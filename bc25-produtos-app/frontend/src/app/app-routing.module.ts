@@ -3,7 +3,9 @@ import { NgModule } from "@angular/core";
 // Iniciar o roteamento
 // Importar o módeulo de roteamento
 import { RouterModule, Routes } from "@angular/router";
+import { CadastroProdutoComponent } from "./pages/cadastro-produto/cadastro-produto.component";
 import { ListarProdutosComponent } from "./pages/listar-produtos/listar-produtos.component";
+import { ProdutoComponent } from "./pages/produto/produto.component";
 
 // rota -> componente
 // a constante rotas é responsável por armazenar as rotas que existem dentro do site
@@ -20,6 +22,14 @@ const rotas: Routes = [
     {
         path: 'produtos',
         component: ListarProdutosComponent // Componente que irá ser exibido na rota produtos
+    },
+    {
+        path: 'produtos/:idProduto', // Rota com parâmetro idProduto
+        component: ProdutoComponent
+    },
+    {
+        path: 'cadastro',
+        component: CadastroProdutoComponent
     }
 ]
 
