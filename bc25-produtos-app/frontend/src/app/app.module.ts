@@ -10,13 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProdutoComponent } from './pages/produto/produto.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CadastroProdutoComponent } from './pages/cadastro-produto/cadastro-produto.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarProdutosComponent,
     ProdutoComponent,
-    CadastroProdutoComponent
+    CadastroProdutoComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

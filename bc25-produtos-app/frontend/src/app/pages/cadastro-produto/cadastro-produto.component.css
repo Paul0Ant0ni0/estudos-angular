@@ -24,13 +24,13 @@
     flex-direction: column;
   }
 
-  .container-btn {
-    position: fixed;
-    height: 50px;
-    width: 50px;
-    right: 25px;
-    top: 88%;
+    .container-btn {
+      position: fixed;
+      height: 50px;
+      width: 50px;
+      right: 25px;
+      top: 88%;
   
-}
+    }
   
 
