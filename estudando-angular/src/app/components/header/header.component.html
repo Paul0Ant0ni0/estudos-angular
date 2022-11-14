@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <!-- color="primary", "accent", "warn" -> Esses 3 tipos de valores para o atributo cores. -->
+    <span>Estudando Angular</span>
+    <button mat-button [matMenuTriggerFor]="menu">
+        <i class="material-icons">menu</i>
+    </button>
+    <mat-menu #menu="matMenu">
+        <a routerLink="/" mat-menu-item>Home</a> <!-- Redirecionamento com o atributo routerLink=""-->
+        <a routerLink="/forms" mat-menu-item>Forms</a>
+        <a routerLink="/calcNota" mat-menu-item>Calcula Nota</a>
+        <a routerLink="/filmes" mat-menu-item>Filmes</a>
+    </mat-menu>
+
+</mat-toolbar>

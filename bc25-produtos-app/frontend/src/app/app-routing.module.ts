@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 // Iniciar o roteamento
 // Importar o módeulo de roteamento
 import { RouterModule, Routes } from "@angular/router";
+import { TestarNumeroGuard } from "./guards/testar-numero.guard";
 import { CadastroProdutoComponent } from "./pages/cadastro-produto/cadastro-produto.component";
 import { ErrorPageComponent } from "./pages/error-page/error-page.component";
 import { ListarProdutosComponent } from "./pages/listar-produtos/listar-produtos.component";
@@ -25,12 +26,15 @@ const rotas: Routes = [
         component: ListarProdutosComponent // Componente que irá ser exibido na rota produtos
     },
     {
-        path: 'produtos/:idProduto', // Rota com parâmetro idProduto
-        component: ProdutoComponent
+        path: 'produtos/novo',
+        component: CadastroProdutoComponent
     },
     {
-        path: 'cadastro',
-        component: CadastroProdutoComponent
+        path: 'produtos/:idProduto', // Rota com parâmetro idProduto
+        component: ProdutoComponent,
+        canActivate: [
+            TestarNumeroGuard
+        ]
     },
     {
         path: '**',

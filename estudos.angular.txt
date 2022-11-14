@@ -1,0 +1,60 @@
+Professor Gabriel Braga
+
+https://github.com/gabriel-soulcode/estudando-angular
+
+1º Criando um componente (header) dentro da pasta components.
+
+Comando: ng g c components/header
+
+Componentes que representam paginas
+ng g c pages/home
+ng g c views/home
+
+2º Angular Material é um fremeworking
+
+Sendo possivel estilizar os templates HTML, diferente do Bootstrap.
+Quando importa a dependencia do angular material, é possivel acessar o recursos do template
+
+color="primary", "accent", "warn" -> Esses 3 tipos de valores para o atributo cores.
+
+3º Vinculação de dados (data-binding)
+Binding de propriedade []
+Binding de evento ()
+Binding de interpolação de string {{}}
+
+Vinculação do template com os dados -> Dados dinâmicos
+Interpolação {{}} -> Irá compreender que é uma propriedade(string, number, boolean e object) em Typescript
+
+Property binding [src]="" adicionado valores nos atributos/propriedades das tags HTML
+
+
+Two Way Data Binding -> Dois caminhos
+Comunicação tanto do HTML <--> Ts
+
+[(ngModel)]="user"
+
+
+4º Diretivas são palavras chaves que realizam uma modificação
+
+Diretivas de atributos: Estilização ou altera o comportamento de um elemento HTML
+Ex: [ngStyle]="{'green': true, 'pink': false}" e [ngStyle]="propriedadeTs" ou [ngClass]="{}" e [ngClass]="[]"
+
+Diretivas estruturais: *ngFor
+
+5ºPipes são tratamentos em determinados dados, antes de ser renderizados na tela
+
+6ºModulos
+
+
+7ºServiços
+Os serviços não são declarados como os componentes, e sim injetados.
+Calculos, Requisições
+
+8ºJson Service
+
+Simula uma api npm i json-server
+json-server --watch db/films.json
+
+
+9º Interface (model) é uma abstração de um objeto
+Observable é um encapsulamento de dados

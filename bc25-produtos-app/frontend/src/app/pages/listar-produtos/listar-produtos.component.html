@@ -1,6 +1,6 @@
 <div class="style-container">
     <mat-card *ngFor="let p of produtos" class="container">
-        <mat-card-content class="cards">
+        <mat-card-content class="cards" *ngIf="p.id != undefined">
             <img [src]="p.foto || altImg" alt="" mat-card-image class="card-img">
             <section>
                 <mat-card-title class="card-title">{{p.nome}}</mat-card-title>
@@ -18,7 +18,7 @@
             </section>
         </mat-card-content>
     </mat-card>
-    <a [routerLink]="'/cadastro'" mat-flat-button color="accent" matTooltip="Adicionar Produto" class="btn-add">
+    <a [routerLink]="'/produtos/novo'" mat-flat-button color="accent" matTooltip="Adicionar Produto" class="btn-add">
         <mat-icon>add</mat-icon>
     </a>
 </div>

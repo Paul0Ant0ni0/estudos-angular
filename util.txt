@@ -15,6 +15,7 @@ Criando um projeto na pasta
 
 ng new nomedoprojeto
 ng new nomedoprojeto --skip-tests (para não criar teste unitários dos componentes)
+ng new nomedoprojeto --skip-tests --routing --style=css
 
 4- Extensão
 

@@ -1,36 +1,34 @@
 .container {
-    height: 100vh;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  mat-card {
-    width: 400px;
-  }
-  
-  mat-card + mat-card {
-    margin-left: 32px;
-  }
-  
-  .desc {
-    text-align: justify;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    .container-btn {
-      position: fixed;
-      height: 50px;
-      width: 50px;
-      right: 25px;
-      top: 88%;
-  
-    }
-  
+mat-card {
+  width: 500px;
+}
 
+mat-card+mat-card {
+  margin-left: 32px;
+}
+
+.desc {
+  text-align: justify;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-btn {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  right: 25px;
+  top: 88%;
+
+}

@@ -17,6 +17,8 @@ export class ProdutoComponent implements OnInit {
 
   produto!: Produto
 
+  produtoNaoEncontrado: boolean = false
+
   produtoForm: FormGroup = new FormGroup({
     descricao: new FormControl('', [Validators.required]),
     foto: new FormControl(''),
@@ -49,19 +51,31 @@ export class ProdutoComponent implements OnInit {
       },
 
       (erro) => {
+      
         if (erro instanceof HttpErrorResponse) {
           if (erro.status == 404) {
-            this.router.navigateByUrl('**')
-            this.snackbar.open(`Produto com id: ${idProduto} não encontrado 😭`, 'X') // abrindo o snackbar na tela 
+            // REnderiza a página de erro 404
+            this.produtoNaoEncontrado = true
+            this.snackbar.open(`Produto não encontrado 😭`, 'X', {
+              duration: 2000
+            }) // abrindo o snackbar na tela 
           }
         }
       }
 
     )
 
+  }
 
-
-
+  deletar(){
+    this.produtosService.deletarPorId(this.produto.id as number).subscribe(
+      () => {
+        this.snackbar.open(`Produto deletado com sucesso 🥳`, 'X', {
+          duration: 2000
+        })
+        this.router.navigateByUrl('/produtos')
+      }
+    )
   }
 
 }

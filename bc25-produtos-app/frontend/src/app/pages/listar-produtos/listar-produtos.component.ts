@@ -21,15 +21,27 @@ export class ListarProdutosComponent implements OnInit {
     this.produtosService.listarProdutos().subscribe(
       (prods) => {
         this.produtos = prods
-        console.log(prods)
       }
 
     )
   }
 
   deletarProduto(idProduto: number){
-    this.deletarProduto(idProduto)
+
+    this.produtosService.deletarPorId(idProduto).subscribe(
+      () => {
+        this.produtosService.listarProdutos().subscribe(
+          (prods) => {
+            this.produtos = prods
+          }
+    
+        )
+      }
+
+    )
   }
+
+  
 
 
 

@@ -1,13 +1,6 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "nome": "Feito à mão Algodão Computador",
-      "preco": "717.00",
-      "descricao": "The Football Is Good For Training And Recreational Purposes",
-      "foto": ""
-    },
-    {
       "id": 2,
       "nome": "Inteligente Algodão Queijo",
       "preco": "661.00",

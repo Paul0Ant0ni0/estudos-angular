@@ -25,14 +25,15 @@ export class ProdutosApiService {
     return this.http.get<Produto>(`${this.base_URL}/${idProduto}`)// fazendo a requisição para recuperar o produto por id
   }
 
-  deletarProduto(idProduto: number){
-    return this.http.delete<Produto>(`${this.base_URL}/${idProduto}`)
+  criarProduto(prod: Produto){ // prod possui as informações do produto que será salvo
+
+    //http://localhost:3000/produtos
+    return this.http.post<Produto>(this.base_URL, prod) // O método post irá retornar um Porduto com o id
   }
 
-  salvarProduto(produto: Produto){
+  deletarPorId(id: number){
+      //http://localhost:3000/produtos/id
 
-    const prod = JSON.stringify(produto)
-
-    return this.http.post<Produto>(`${this.base_URL}`,`${prod}`)
+    return this.http.delete<void>(`${this.base_URL}/${id}`)
   }
 }
