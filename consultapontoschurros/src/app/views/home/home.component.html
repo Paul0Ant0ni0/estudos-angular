@@ -1,0 +1,70 @@
+<app-header></app-header>
+<main class="container">
+    <app-list-pontos [pontosDeVendas]="pontosDeVendas" [exibir]="exibir" class="list"></app-list-pontos>
+
+    <hr class="divisao">
+
+    <div class="container-form">
+        <h2>Cadastre um novo ponto de venda</h2>
+        <form class="form" [formGroup]="consultaForm" (ngSubmit)="addPonto()">
+            <mat-form-field appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input type="text" matInput formControlName="nome" placeholder="Ex. Churros todo dia">
+                <mat-error>
+                    <p>O campo nome é obrigatório</p>
+                </mat-error>
+            </mat-form-field>
+            <section class="form-group">
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Estado</mat-label>
+                    <mat-select formControlName="estado" (selectionChange)="listarCidade()">
+                        <mat-option *ngFor="let estado of estados" [value]="estado.sigla">{{estado.nome}}</mat-option>
+                    </mat-select>
+                    <mat-error>
+
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Cidade</mat-label>
+                    <mat-select formControlName="cidade">
+                        <mat-option *ngFor="let cidade of cidades" [value]="cidade.nome">{{cidade.nome}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="consultaForm.get('cidade')?.getError('required')">
+                        O campo cidade é obrigatório
+                    </mat-error>
+                </mat-form-field>
+
+            </section>
+            <mat-form-field appearance="fill">
+                <mat-label>Ponto de venda</mat-label>
+                <input type="text" matInput formControlName="pontoVenda" placeholder="Ex. Praça dos Estudantes">
+                <mat-error *ngIf="consultaForm.get('pontoVenda')?.getError('required')">
+                    O campo ponto de venda obrigatório
+                </mat-error>
+            </mat-form-field>
+
+            <section class="form-group">
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Começa as</mat-label>
+                    <input type="time" matInput formControlName="inicio">
+                    <mat-error *ngIf="consultaForm.get('inicio')?.getError('required')">
+                        O campo este campo obrigatório
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Termina as</mat-label>
+                    <input type="time" matInput formControlName="fim">
+                    <mat-error *ngIf="consultaForm.get('fim')?.getError('required')">
+                        O campo este campo obrigatório
+                    </mat-error>
+                </mat-form-field>
+            </section>
+
+            <button mat-flat-button class="mat-elevation-z1" color="primary" matTooltip="Cadastrar" [disabled]="consultaForm.invalid">
+                Cadastrar
+            </button>
+        </form>
+    </div>
+</main>

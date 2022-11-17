@@ -1,0 +1,22 @@
+{
+  "PontosDeVendas": [
+    {
+      "id": 1,
+      "nome": "Churros Sr. Zé",
+      "ponto": "Praça da Igreja Matriz",
+      "estado": "Acré",
+      "cidade": "Brasiléia",
+      "inicio": "18:00",
+      "fim": "21:00"
+    },
+    {
+      "id": 2,
+      "nome": "Churros Sr. Zé",
+      "ponto": "Praça da Igreja Matriz",
+      "estado": "Acré",
+      "cidade": "Brasiléia",
+      "inicio": "18:00",
+      "fim": "21:00"
+    }
+  ]
+}

@@ -94,3 +94,11 @@ ng generate s <nomedapasta>/services
 
 19 - Link 
 https://rxjs.dev/guide/installation
+
+
+20 - Deploy Aplicação
+
+comandos: ng build --output-path docs--base-href/nome-base/
+criar um repositório remoto no github
+
+

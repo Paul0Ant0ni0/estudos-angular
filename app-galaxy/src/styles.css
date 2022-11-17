@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(4, 10, 23);
+    background: linear-gradient(45deg, rgb(4, 10, 23) 3%, rgb(0, 4, 72) 30%, rgb(75, 46, 133) 67%);
+    padding-top: 64px;
+}
+
+.container {
+    width: clamp(300px, 100%¨, 1200px);
+    height: 100%;
+    padding: 30px;
+    margin: 0 auto;
+}
