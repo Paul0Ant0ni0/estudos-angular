@@ -1,6 +1,6 @@
 <app-header></app-header>
 <main class="container">
-    <app-list-pontos [pontosDeVendas]="pontosDeVendas" [exibir]="exibir" class="list"></app-list-pontos>
+    <app-list-pontos [pontosDeVendas]="pontosDeVendas" class="list"></app-list-pontos>
 
     <hr class="divisao">
 
@@ -22,12 +22,12 @@
                         <mat-option *ngFor="let estado of estados" [value]="estado.sigla">{{estado.nome}}</mat-option>
                     </mat-select>
                     <mat-error>
-
+                        O campo estado é obrigatório
                     </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Cidade</mat-label>
-                    <mat-select formControlName="cidade">
+                    <mat-select formControlName="cidade" [disabled]="isDisableCidade">
                         <mat-option *ngFor="let cidade of cidades" [value]="cidade.nome">{{cidade.nome}}</mat-option>
                     </mat-select>
                     <mat-error *ngIf="consultaForm.get('cidade')?.getError('required')">
@@ -50,14 +50,14 @@
                     <mat-label>Começa as</mat-label>
                     <input type="time" matInput formControlName="inicio">
                     <mat-error *ngIf="consultaForm.get('inicio')?.getError('required')">
-                        O campo este campo obrigatório
+                        O  este campo obrigatório
                     </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Termina as</mat-label>
                     <input type="time" matInput formControlName="fim">
                     <mat-error *ngIf="consultaForm.get('fim')?.getError('required')">
-                        O campo este campo obrigatório
+                        O este campo obrigatório
                     </mat-error>
                 </mat-form-field>
             </section>

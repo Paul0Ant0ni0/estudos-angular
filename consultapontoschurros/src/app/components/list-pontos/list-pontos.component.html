@@ -1,6 +1,6 @@
 <div>
     <h2>Pontos de vendas cadastrados</h2>
-    <ul *ngIf="exibir; else vazio">
+    <ul *ngIf="pontosDeVendas.length !== 0; else vazio">
         <li *ngFor="let ponto of pontosDeVendas; let i = index;">
             {{ponto.nome}} - {{ponto.ponto}} {{ponto.cidade}} -
             {{ponto.estado}} ({{ponto.inicio}} às {{ponto.fim}})

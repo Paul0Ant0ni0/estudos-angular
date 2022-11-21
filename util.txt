@@ -10,6 +10,12 @@ npm install -g @angular/cli
 Versão
 ng version
 
+
+4- Atualizando angular e node
+npm i -g npm@latest
+npm i -g @angular/cli
+
+
 3- Parte
 Criando um projeto na pasta
 
@@ -100,5 +106,29 @@ https://rxjs.dev/guide/installation
 
 comandos: ng build --output-path docs--base-href/nome-base/
 criar um repositório remoto no github
+Subir o arquivo para o github, logo após, configurações -> Pages -> Selecionar a branch e a nome-base
+
+21 - Firebase
+ng new app-colaboradores --routing --style=css  --skip-tests
+
+Criar uma pasta environment e um arquivo environment.ts dentro de src -> adicionar a variaves de ambiente criada no projeto do firebase
+npm install firebase -> instalar no terminal a dependência do firebase
+npm i @angular/fire
+
+eu fiz downgrade e gerei um projeto novo fiz assim:
+npm install @angular/cli@v14.0.0 -g
+ng version
+==== GERAR UM PROJETO NOVO COM ng new ====
+ng add @angular/material@v14
+ng add @angular/fire
+
+NECESSÁRIO ATIVAR O PROVEDOR NO FIREBASE CONSOLE
 
 
+22 - Atualizando rxjs
+npm install rxjs@7.5.0
+
+
+23- Status code firebase 
+
+https://firebase.google.com/docs/auth/admin/errors

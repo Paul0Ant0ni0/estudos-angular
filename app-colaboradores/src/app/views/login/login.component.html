@@ -1,0 +1,16 @@
+<div id="login-container">
+    <div class="login-form">
+        <h1>Login</h1>
+        <button (click)="signInGoogle()">
+            <img src="assets/icons/google.svg" alt="logo-google">
+        </button>
+        <form [formGroup]="formLogin">
+                <input type="email" placeholder="E-mail" formControlName="email">
+                <input type="password" placeholder="25155574" formControlName="senha">
+            <button type="submit" matTooltip="Cadastrar" (click)="signEmailAndPassword()">
+                Entrar
+            </button>
+        </form>
+        <span>Ainda não é cadastrado ? <a routerLink="/cadastrar">Cadastre-se</a></span>
+    </div>
+</div>

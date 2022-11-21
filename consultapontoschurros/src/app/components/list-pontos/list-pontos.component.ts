@@ -13,8 +13,8 @@ export class ListPontosComponent implements OnInit {
   @Input()
   public pontosDeVendas!: PontosVendas[]
 
-  @Input()
-  public exibir!: boolean
+  //@Input()
+  //public exibir!: boolean
 
 
   constructor(

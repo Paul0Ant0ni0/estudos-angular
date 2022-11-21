@@ -27,30 +27,36 @@ export class HomeComponent implements OnInit {
 
 
   public pontosDeVendas: PontosVendas[] = []
-  public exibir: boolean = false
+  public isDisableCidade: boolean = true
+  //public exibir: boolean = false
 
   constructor(private service: ApiIbgeService, private fb: FormBuilder, servicePonto: ApiPontosVendasService) { }
 
   ngOnInit(): void {
+    this.initializeFieldEstado()
+    
+  }
+
+  public initializeFieldEstado(): void{
     this.service.listarEstados().subscribe((estados) => {
       this.estados = estados
 
     })
-    
   }
 
-  public listarCidade(){
+  public listarCidade(): void{
     const valor = this.consultaForm.get('estado')?.value
     this.service.listarCidades(valor).subscribe((cidades)=> {
       this.cidades = cidades
+      this.isDisableCidade = false
     })
   }
 
 
 
-  public addPonto(){
+  public addPonto(): void{
     this.pontosDeVendas.push(this.consultaForm.value)
-    this.exibir = true
+    //this.exibir = true
 
     // const ponto = this.consultaForm.value
     // this.servicePonto.salvarPonto(ponto).subscribe((pontos) => {
