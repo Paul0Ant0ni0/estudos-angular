@@ -15,11 +15,14 @@ export class HomeComponent implements OnInit {
 
   consultaForm: FormGroup = this.fb.group({
     nome: ['', [Validators.required]],
+    email: ['', [Validators.required]],
+    telefone: ['', [Validators.required]],
+    dataNasc: ['', [Validators.required]],
+    linkedinPortifolio: ['', [Validators.required]],
+    cargo: ['', [Validators.required]],
+    cep: ['', [Validators.required]],
     estado: ['', [Validators.required]],
-    cidade: ['', [Validators.required]],
-    pontoVenda: ['', [Validators.required]],
-    inicio: ['', [Validators.required]],
-    fim: ['', [Validators.required]]
+    cidade: ['', [Validators.required]]
   })
 
   public estados: Estados[] = []

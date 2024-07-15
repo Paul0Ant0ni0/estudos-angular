@@ -12,14 +12,14 @@ export class NotificationService {
     if(tipo == "error"){
       this.snackbar.open(msg, 'Fechar', {
         duration: 3000,
-        horizontalPosition: 'left',
+        horizontalPosition: 'right',
         verticalPosition: 'top',
         panelClass: 'alert-red'
       });
     }else if(tipo == "success"){
       this.snackbar.open(msg, 'Fechar', {
         duration: 3000,
-        horizontalPosition: 'left',
+        horizontalPosition: 'right',
         verticalPosition: 'top',
         panelClass: 'alert-green'
       });

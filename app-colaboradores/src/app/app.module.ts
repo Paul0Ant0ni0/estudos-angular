@@ -11,9 +11,15 @@ import { environment } from 'src/environments/environment';
 import { LoginComponent } from './views/login/login.component';
 import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
 import { HomeComponent } from './views/home/home.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
-
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { NewCollaboratorComponent } from './views/new-collaborator/new-collaborator.component';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { EditCollaboratorComponent } from './views/edit-collaborator/edit-collaborator.component';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { DetailsComponent } from './components/details/details.component';
+import { AvatarPipe } from './pipes/avatar.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,12 @@ import { HeaderComponent } from './components/header/header.component';
     LoginComponent,
     CadastrarUsuarioComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    DashboardComponent,
+    NewCollaboratorComponent,
+    EditCollaboratorComponent,
+    DetailsComponent,
+    AvatarPipe
   ],
   imports: [
     BrowserModule,
@@ -30,7 +41,10 @@ import { HeaderComponent } from './components/header/header.component';
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig), // Inicializa o projeto firebase
     AngularFireAuthModule, // Módulo de autenticação do firebase
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFirestoreModule, // Módulo de banco de dados do firestore
+    AngularFireStorageModule, // Banco de arnazebamebti de arquivos
+    FormsModule // Forms Temnplate Driver
     
 
   ],

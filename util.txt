@@ -1,3 +1,13 @@
+GIT STASH -  Atualizar branch main (local) enquanto houver alterações da branch (remota)
+
+1 - git stash - salvando as minhas alterações (local) em stash
+2 - git pull - puxando as alterações feita no repositório remoto
+2 - git stash list - listando as minhas stash no git (local)
+3 - git stash apply <númerodastash> - restaurando a stash
+4 - git status
+5 - git stash clear - exclui todas as minhas stashes
+
+
 Angular
 
 1- Parte
@@ -22,7 +32,7 @@ Criando um projeto na pasta
 ng new nomedoprojeto
 ng new nomedoprojeto --skip-tests (para não criar teste unitários dos componentes)
 ng new nomedoprojeto --skip-tests --routing --style=css
-
+ng new cro  --skip-tests --routing --style=css
 4- Extensão
 
 Angular Language Service
@@ -109,7 +119,7 @@ criar um repositório remoto no github
 Subir o arquivo para o github, logo após, configurações -> Pages -> Selecionar a branch e a nome-base
 
 21 - Firebase
-ng new app-colaboradores --routing --style=css  --skip-tests
+ng new portifolio --routing --style=css  --skip-tests
 
 Criar uma pasta environment e um arquivo environment.ts dentro de src -> adicionar a variaves de ambiente criada no projeto do firebase
 npm install firebase -> instalar no terminal a dependência do firebase
@@ -132,3 +142,107 @@ npm install rxjs@7.5.0
 23- Status code firebase 
 
 https://firebase.google.com/docs/auth/admin/errors
+fatimaterezasouza@agreonoma.eng.br
+https://github.com/angular/angularfire
+
+24 - Deploy aplicação firebase
+https://firebase.google.com/docs/cli
+Comando: ng build
+
+Instalando o angular firebase tools
+   
+
+Autenticando a conta do firebase, para assim, listar os projetos 
+firebase login
+Opção: N/n
+
+Deslogar da conta firebase
+firebase logout
+
+Listar os projetos firebase
+firebase projects:list
+
+Inicializando a funcionalidade de hosting
+firebase init
+Opção: Y/y
+Opção: Hosting
+Que tipo de projeto: exitente
+Selecione o projeto?
+Qual a pasta pública? -> Copiar o caminho relativo da pasta dist dist/
+Sigle page: Y/y
+Github: N/n
+
+Ativar o hosting no console firebase
+firebase deploy
+
+Para atualizar a apliacação na nuvem
+ng build
+firebase deploy
+
+
+25 - Lazy Loading
+
+Uma vantagem de dividir a aplicação em módulos é a possibilidade de fazer o carregamento de determinados 
+módulos somente quando houver necessidade. Quando se usa módulos Lazy Loading, o carregamento só é feito 
+quando o usuário navega para a rota do respectivo módulo.
+
+lazy = carrega apenas quando necessário
+
+Link: https://angular.io/guide/lazy-loading-ngmodules
+ng g m views/agradecimento --route agradecimento --module app.module
+
+Primeiro cria um modulo dos compoenents 
+ng g m components/components
+
+Criar os componentes atualizando o componentes.module
+
+Comando para criar um componente
+
+ ng g c components/popup
+
+
+--------------
+Criando uma nova view que irá atualizar o módulo de chamados, mas é necessário adicionar no chamados-routing
+
+ng g c views/chamados/new-chamado
+
+
+26 - Validação do token de api
+
+https://www.npmjs.com/package/@auth0/angular-jwt
+npm i @auth0/angular-jwt
+
+
+27 - Interceptor é um service que implementa a interface HttpInterceptor
+para passar o token de autorização nas requisições http, colocando alguma coisa na requisição, por exemplo o token de autorização
+
+ng g interceptor interceptors/auth
+
+28 - Quando se trabalha com lazy loading, primeiramente se cria o módulo.
+ng g m views/chamados --route chamados(nomedorouting) --module app.module(móduloprincipal)
+
+
+29 - Interrogação verifica se é null, evitando a utilização do *ngIf
+O ? é um operador do Angular que protege a propriedade contra valores nulos e indefinidos.
+ 	
+Exemplo:
+                <td mat-cell *matCellDef="let chamado"> {{chamado.funcionario?.nome}} </td>
+
+
+30 - Senha do professor 12345678
+
+
+30 - Modulo para enviar emails
+
+https://nodemailer.com/about/
+
+
+31 - Rodar projeto angular no celular 
+
+terminal cli do angular ng serve --host  192.168.15.83
+no celular http://192.168.15.83:4200
+
+
+32 - Para fazer deploy para o netfly
+cmd: ng build --configuration=production
+npx ngh --dir=dist/grupoinovar

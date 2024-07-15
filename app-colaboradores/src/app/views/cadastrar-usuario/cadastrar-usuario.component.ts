@@ -21,7 +21,7 @@ export class CadastrarUsuarioComponent implements OnInit {
     private router: Router) {
 
     this.formCadastro = fb.group({
-      email: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       senha: ['', [Validators.required]]
     });
   }
@@ -37,13 +37,17 @@ export class CadastrarUsuarioComponent implements OnInit {
   }
 
   public createUserEmailAndPassword(): void {
-    const user: User = this.formCadastro.value;
-    this.authService.createUserEmailAndPassword(user).subscribe(response => {
+    if (this.formCadastro.valid) {
+      const user: User = this.formCadastro.value;
+      this.authService.createUserEmailAndPassword(user).subscribe(response => {
 
-      this.notification.showMessege("Cadastrado(a) com sucesso!", "success")
-      this.router.navigate(["/login"]);
+        this.notification.showMessege("Cadastrado(a) com sucesso!", "success")
+        this.router.navigate(["/login"]);
 
-    })
+      })
+    }else{
+      this.notification.showMessege("Dados inválidos!", "error");
+    }
   }
 
 }
